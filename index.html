@@ -3,88 +3,110 @@
 
 <head>
 	<title>Assignment Tracker</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!--Start Google Font-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<!--End Google Font-->
+
+<!--AI Use Disclosure:
+Tool(s): ChatGPT (free version)
+Purpose: Helped me in developing the grid so that the days of the week were next to eachother, also helped with the spacing (margins)
+Human Role: I applied the explanation to my project situation, inserted the recommended CSS code, and modified the code to work on my page. -->
+
+<!--AI Use Disclosure:
+Tool(s): ChatGPT (free version)
+Purpose: Helped me create an "add task" button
+Human Role: I applied the explanation to my project situation, inserted the recommended CSS code, and modified the code to work on my page. -->
+
 </head>
 
 <body>
 
 <header>
-	<h1>Assignment Tracker 2026</h1>
 
-	<img src="Calendar-app-icon-Small.jpeg" alt="pink calendar app icon">
+
+	<div class="container">
+  <img src="aura-background-small.jpeg" alt="pink and orange aura photo" style="width:100%;">
+  <h1 class="bottom-left">
+   🗓️ Assignment Tracker 2026 </h1>
+
+</div>
 
 </header>
 
 
-	<!--navigation bar to jump to each specific day-->
-
-<nav>
- <a href="#monday">Monday</a>
-    <a href="#tuesday">Tuesday</a>
-    <a href="#wednesday">Wednesday</a>
-    <a href="#thursday">Thursday</a>
-    <a href="#friday">Friday</a>
-    <a href="#weekend">Weekend</a>
-</nav>
-
 <main>
 
-	<h2> Add a Task</h2>
+<form>
+    <label for="task">Task:</label>
+    <input type="text" id="task" placeholder="Enter a task...">
+    <button type="button">Add Task</button>
+</form>
 
-	<!--add a task form- does not actually work-->
+<section class="weekly-todo">
+    <h2>To Do This Week</h2>
+    <ul>
+        <li>Laundry</li>
+        <li>Clean room</li>
+        <li>Grocery shopping</li>
+    </ul>
+</section>
 
-	<form>
-    <label>Task:</label>
-    <input>
-    <button>Add Task</button>
-	</form>
+<div class="days">
 
 <section id="monday">
 <h2> Monday </h2>
 <ul>
 <li>Read Chapter 4 for 307</li>
-<li>Discussion Post for 101</li>
+<li>Discussion post for 101</li>
 </ul>
 </section>
 
-<section id="tuesday">
+<section id="thursday">
 
-<h2> Tuesday </h2>
+<h2> Thursday </h2>
 <ul>
 <li>Physics paper</li>
 <li>Read pages 27-38 for 290</li>
 </ul>
 </section>
 
-<section id="wednesday">
-<h2> Wednesday </h2>
+<section id="tuesday">
+<h2> Tuesday </h2>
 <ul>
 <li>Finish writing draft</li>
 <li>Study 101</li>
 </ul>
 </section>
 
-<section id="thursday">
-<h2> Thursday </h2>
+<section id="friday">
+<h3> Friday </h3>
 <ul>
 <li>Read pages 50-70 for 290</li>
 <li>Discussion Post for 307</li>
 </ul>
 </section>
 
-<section id="friday">
-<h2> Friday </h2>
+<section id="wednesday">
+<h3> Wednesday </h3>
 <ul>
 <li>Turn in writing draft</li>
 </ul>
 </section>
 
 <section id="weekend">
-<h2> Weekend </h2>
+<h3> Weekend </h3>
 <ul>
 <li>Study for 101 quiz</li>
 <li>Watch lecture video for 307</li>
 </ul>
 </section>
+
+</div>
 
 </main>
 <footer>
