@@ -1,8 +1,9 @@
+/* ADD YOUR CUSTOM CSS TO THIS FILE BELOW */
 header { 
 position:relative; 
 width: 100%; } 
 
-.container { ;
+.container { 
 position: relative;}
 
 .bottom-left {
@@ -17,12 +18,7 @@ font-size: 48px }
 h2, h3 { font-size: 27px }
 
 
-.days { display: grid; 
-	grid-template-columns: auto auto;
-column-gap: 40px;
-row-gap: 20px;
-margin-left: 550px;
-margin-top: -150px;}
+
 
 	body { background-color: #fdf0f2; 
 	font-family: "PT Serif", serif; }
@@ -63,9 +59,47 @@ button {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    margin-top: 30px;
+    margin-top: 0px;
 }
 
-button:hover {
-    background-color: #b94768;
+.btn-primary {
+    background-color: #d85b7d;
+    border-color: #d85b7d;
 }
+
+main { 
+
+	padding-top: 30px;
+
+}
+
+
+/*AI HELPED MAKE THE CARDS TRANSPARENT*/
+.card {
+    background-color: rgba(255, 255, 255, 0.65);
+    border: none;
+    border-radius: 12px;
+}
+
+
+/*AI HELPED MAKE SPACE BETWEEN ITEMS*/
+.list-group-item {
+    border-radius: 10px !important;
+    background-color: rgba(255, 255, 255, 0.65);
+}
+
+/* Custom colors for Bootstrap priority badges */
+
+.priority-high {
+    background-color: #d85b7d;
+    color: white;
+}
+
+/* Low priority badge */
+.priority-low {
+    background-color: #a5bfa5;
+    color: white;
+}
+
+
+

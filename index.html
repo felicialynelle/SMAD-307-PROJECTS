@@ -1,35 +1,42 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="YOUR DESCRIPTION HERE">
+    <meta name="author" content="YOUR NAME HERE">
+    <title>Starter Template · Bootstrap v5.3.8</title>
 
-<head>
-	<title>Assignment Tracker</title>
+   <!-- Bootstrap v5.3.8 -->
+   <!-- LOAD BOOTSTRAP CSS - DO NOT DELETE -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+   <!-- END LOADING BOOTSTRAP CSS -->
+    
+   <!-- Custom styles - add your own CSS to this stylesheet -->
+    <link href="style.css" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css">
+  <!--
+AI Use Disclosure:
+Tool: ChatGPT (premium version)
+I used ChatGPT to help with certain parts of my HTML and CSS,
+including making my header image stretch across the page,
+fixing the color of my button, adjusting the transparency of
+my cards, adding space between list items, and customizing
+the colors of my priority badges to better match my website's
+design. I also used AI to help troubleshoot coding issues
+throughout the project.
+Human role: I chose and implemented the Bootstrap components,
+edited the HTML and CSS, tested the website, and made adjustments
+based on how I wanted the final design to look. 
+-->
 
-<!--Start Google Font-->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-<!--End Google Font-->
-
-<!--AI Use Disclosure:
-Tool(s): ChatGPT (free version)
-Purpose: Helped me in developing the grid so that the days of the week were next to eachother, also helped with the spacing (margins)
-Human Role: I applied the explanation to my project situation, inserted the recommended CSS code, and modified the code to work on my page. -->
-
-<!--AI Use Disclosure:
-Tool(s): ChatGPT (free version)
-Purpose: Helped me create an "add task" button
-Human Role: I applied the explanation to my project situation, inserted the recommended CSS code, and modified the code to work on my page. -->
-
-</head>
-
-<body>
-
+  </head>
+  <body>
+    
 <header>
 
-
-	<div class="container">
+<!-- USED AI TO GET THE PHOTO ACROSS THE WHOLE PAGE -->
+  <div class="container-fluid p-0">
   <img src="aura-background-small.jpeg" alt="pink and orange aura photo" style="width:100%;">
   <h1 class="bottom-left">
    🗓️ Assignment Tracker 2026 </h1>
@@ -41,64 +48,89 @@ Human Role: I applied the explanation to my project situation, inserted the reco
 
 <main>
 
+<div class="container">
+
 <form>
     <label for="task">Task:</label>
-    <input type="text" id="task" placeholder="Enter a task...">
-    <button type="button">Add Task</button>
-</form>
+   <input type="text" id="task" class="form-control w-auto d-inline-block" placeholder="Enter a task...">
+<button type="button" class="btn btn-primary">Add Task</button></form>
+<!-- USED AI TO GET THE COLOR OF THE BUTTON BACK^^ -->
 
+
+<div class="row">
+    <div class="col-md-4">
 <section class="weekly-todo">
     <h2>To Do This Week</h2>
-    <ul>
-        <li>Laundry</li>
-        <li>Clean room</li>
-        <li>Grocery shopping</li>
+    <ul class="list-group gap-2">
+        <li class="list-group-item">Laundry</li>
+        <li class="list-group-item">Clean room</li>
+        <li class="list-group-item">Grocery shopping</li>
     </ul>
 </section>
 
-<div class="days">
+</div>
+<div class="col-md-8">
 
-<section id="monday">
+<div class="row days">
+    <div class="col-md-6">
+
+<section id="monday" class="card p-3 mb-3">
 <h2> Monday </h2>
 <ul>
-<li>Read Chapter 4 for 307</li>
-<li>Discussion post for 101</li>
+<li>
+    Read Chapter 4 for 307
+    <span class="badge rounded-pill priority-low">Low Priority</span> <li>
+<li>
+    Discussion post for 101
+    <span class="badge rounded-pill priority-high">High Priority</span>
+</li>
 </ul>
 </section>
 
-<section id="thursday">
-
-<h2> Thursday </h2>
+<section id="tuesday" class="card p-3 mb-3">
+<h2> Tuesday </h2>
 <ul>
-<li>Physics paper</li>
+<li>
+    Physics Paper
+    <span class="badge rounded-pill priority-high">High Priority</span>
+</li>
 <li>Read pages 27-38 for 290</li>
 </ul>
 </section>
 
-<section id="tuesday">
-<h2> Tuesday </h2>
+<section id="wednesday" class="card p-3 mb-3">
+<h2> Wednesday </h2>
 <ul>
 <li>Finish writing draft</li>
 <li>Study 101</li>
 </ul>
 </section>
 
-<section id="friday">
-<h3> Friday </h3>
+ </div>
+    <div class="col-md-6">
+
+<section id="thursday" class="card p-3 mb-3">
+<h3> Thursday </h3>
 <ul>
-<li>Read pages 50-70 for 290</li>
+<li>
+    Read pages 50-70 for 290
+    <span class="badge rounded-pill priority-low">Low Priority</span><li>
 <li>Discussion Post for 307</li>
 </ul>
 </section>
 
-<section id="wednesday">
-<h3> Wednesday </h3>
+<section id="friday" class="card p-3 mb-3">
+<h3> Friday </h3>
 <ul>
-<li>Turn in writing draft</li>
+<li>
+    Turn in writing draft
+    <span class="badge rounded-pill priority-high">High Priority</span>
+</li>
 </ul>
 </section>
 
-<section id="weekend">
+
+<section id="weekend" class="card p-3 mb-3">
 <h3> Weekend </h3>
 <ul>
 <li>Study for 101 quiz</li>
@@ -107,10 +139,17 @@ Human Role: I applied the explanation to my project situation, inserted the reco
 </section>
 
 </div>
-
+</div>
+</div>
+</div>
+</div>
 </main>
 <footer>
 <p> Assignment Tracker 2026 | Felicia Badalamenti </p>
 </footer>
-</body>
+<!-- LOAD BOOTSTRAP JAVASCRIPT - DO NOT DELETE -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<!-- END LOADING BOOTSTRAP JAVASCRIPT -->
+      
+  </body>
 </html>
