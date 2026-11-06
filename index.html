@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="YOUR DESCRIPTION HERE">
     <meta name="author" content="YOUR NAME HERE">
-    <title>Starter Template · Bootstrap v5.3.8</title>
+    <title>Assignment Tracker 2026</title>
 
    <!-- Bootstrap v5.3.8 -->
    <!-- LOAD BOOTSTRAP CSS - DO NOT DELETE -->
@@ -18,16 +18,17 @@
   <!--
 AI Use Disclosure:
 Tool: ChatGPT (premium version)
-I used ChatGPT to help with certain parts of my HTML and CSS,
-including making my header image stretch across the page,
-fixing the color of my button, adjusting the transparency of
-my cards, adding space between list items, and customizing
-the colors of my priority badges to better match my website's
-design. I also used AI to help troubleshoot coding issues
-throughout the project.
-Human role: I chose and implemented the Bootstrap components,
-edited the HTML and CSS, tested the website, and made adjustments
-based on how I wanted the final design to look. 
+For Project 4, I used ChatGPT to help create a collapsible navigation
+menu with links to each day, and making my weekly To Do list
+collapsible on mobile devices. I also used AI to troubleshoot
+coding issues and understand how Bootstrap components and
+responsive breakpoints work. 
+Human role: I chose the layout and design of my website,
+decided which elements should be visible or collapsible on
+smaller screens, implemented and edited the HTML and CSS,
+and tested the website on different screen sizes. I also
+validated my HTML and CSS using the W3C validators and
+made adjustments based on my design preferences. 
 -->
 
   </head>
@@ -42,9 +43,41 @@ based on how I wanted the final design to look.
    🗓️ Assignment Tracker 2026 </h1>
 
 </div>
-
 </header>
 
+<nav class="navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Assignment Tracker</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    <li class="nav-item">
+        <a class="nav-link" href="#monday">Monday</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#tuesday">Tuesday</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#wednesday">Wednesday</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#thursday">Thursday</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#friday">Friday</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#weekend">Weekend</a>
+    </li>
+</ul>
+
+    </div>
+  </div>
+</nav>
 
 <main>
 
@@ -58,34 +91,51 @@ based on how I wanted the final design to look.
 
 
 <div class="row">
-    <div class="col-md-4">
-<section class="weekly-todo">
-    <h2>To Do This Week</h2>
-    <ul class="list-group gap-2">
-        <li class="list-group-item">Laundry</li>
-        <li class="list-group-item">Clean room</li>
-        <li class="list-group-item">Grocery shopping</li>
-    </ul>
+<div class="col-md-4">
+    
+<section id="todo" class="weekly-todo">
+
+    <h2 class="d-none d-md-block">To Do This Week</h2>
+
+    <button class="btn btn-primary d-md-none mb-3"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#todoList"
+            aria-expanded="false"
+            aria-controls="todoList">
+        To Do This Week ▼
+    </button>
+
+    <div class="collapse d-md-block" id="todoList">
+        <ul class="list-group gap-2">
+            <li class="list-group-item">Laundry</li>
+            <li class="list-group-item">Clean room</li>
+            <li class="list-group-item">Grocery shopping</li>
+        </ul>
+    </div>
+
 </section>
 
 </div>
 <div class="col-md-8">
-
 <div class="row days">
     <div class="col-md-6">
+
 
 <section id="monday" class="card p-3 mb-3">
 <h2> Monday </h2>
 <ul>
 <li>
     Read Chapter 4 for 307
-    <span class="badge rounded-pill priority-low">Low Priority</span> <li>
+    <span class="badge rounded-pill priority-low">Low Priority</span>
+</li>
 <li>
     Discussion post for 101
     <span class="badge rounded-pill priority-high">High Priority</span>
 </li>
 </ul>
 </section>
+
 
 <section id="tuesday" class="card p-3 mb-3">
 <h2> Tuesday </h2>
@@ -114,7 +164,8 @@ based on how I wanted the final design to look.
 <ul>
 <li>
     Read pages 50-70 for 290
-    <span class="badge rounded-pill priority-low">Low Priority</span><li>
+    <span class="badge rounded-pill priority-low">Low Priority</span>
+</li>
 <li>Discussion Post for 307</li>
 </ul>
 </section>
